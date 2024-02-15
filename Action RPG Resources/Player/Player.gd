@@ -34,7 +34,7 @@ func _physics_process(delta):
 		ROLL:
 			pass
 		ATTACK:
-			attack_state(delta)
+			attack_state()
 
 func move_state(delta):
 	# 초기화
@@ -73,7 +73,7 @@ func move_state(delta):
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
 
-func attack_state(delta):
+func attack_state():
 	velocity = Vector2.ZERO
 	animationState.travel("Attack")
 

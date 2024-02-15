@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://dh84auqhithd3"]
 
-[ext_resource type="Texture2D" uid="uid://cn4ffk2xujomq" path="res://Action RPG Resources/World/GrassBackground.png" id="1_6dt7m"]
-[ext_resource type="PackedScene" uid="uid://bdh6xla7vm1kp" path="res://Action RPG Resources/Player/player.tscn" id="1_o0v6b"]
-[ext_resource type="Texture2D" uid="uid://d3hnfvraybv7i" path="res://Action RPG Resources/World/DirtTileset.png" id="2_1ber3"]
-[ext_resource type="PackedScene" uid="uid://dhewfuxplt7xy" path="res://Action RPG Resources/World/bush.tscn" id="2_14l6h"]
-[ext_resource type="Texture2D" uid="uid://j230iamaeyxr" path="res://Action RPG Resources/World/CliffTileset.png" id="3_ba5ma"]
-[ext_resource type="PackedScene" uid="uid://fa08nopr6asf" path="res://Action RPG Resources/World/grass.tscn" id="6_qxt01"]
+[ext_resource type="Texture2D" uid="uid://cn4ffk2xujomq" path="res://Action RPG Resources/World/GrassBackground.png" id="1_op04d"]
+[ext_resource type="Texture2D" uid="uid://d3hnfvraybv7i" path="res://Action RPG Resources/World/DirtTileset.png" id="2_unn8j"]
+[ext_resource type="Texture2D" uid="uid://j230iamaeyxr" path="res://Action RPG Resources/World/CliffTileset.png" id="3_jj01v"]
+[ext_resource type="PackedScene" uid="uid://dhewfuxplt7xy" path="res://Action RPG Resources/World/bush.tscn" id="4_obf5x"]
+[ext_resource type="PackedScene" uid="uid://bdh6xla7vm1kp" path="res://Action RPG Resources/Player/player.tscn" id="5_25aga"]
+[ext_resource type="PackedScene" uid="uid://fa08nopr6asf" path="res://Action RPG Resources/World/grass.tscn" id="6_wqisu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5k0gs"]
-texture = ExtResource("2_1ber3")
+texture = ExtResource("2_unn8j")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -348,7 +348,7 @@ sources/0 = SubResource("TileSetAtlasSource_5k0gs")
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0p5dl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ngkxk"]
-texture = ExtResource("3_ba5ma")
+texture = ExtResource("3_jj01v")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -824,6 +824,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_c5qf4"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_0p5dl")
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Ciff"
@@ -835,7 +836,7 @@ sources/0 = SubResource("TileSetAtlasSource_ngkxk")
 [node name="Background" type="Sprite2D" parent="."]
 texture_repeat = 2
 position = Vector2(160, 90)
-texture = ExtResource("1_6dt7m")
+texture = ExtResource("1_op04d")
 region_enabled = true
 region_rect = Rect2(0, 0, 320, 180)
 
@@ -855,55 +856,55 @@ y_sort_enabled = true
 [node name="Bushes" type="Node2D" parent="Node2D"]
 y_sort_enabled = true
 
-[node name="Bush" parent="Node2D/Bushes" instance=ExtResource("2_14l6h")]
+[node name="Bush" parent="Node2D/Bushes" instance=ExtResource("4_obf5x")]
 position = Vector2(171, 163)
 
-[node name="Bush2" parent="Node2D/Bushes" instance=ExtResource("2_14l6h")]
+[node name="Bush2" parent="Node2D/Bushes" instance=ExtResource("4_obf5x")]
 position = Vector2(145, 117)
 
-[node name="Bush3" parent="Node2D/Bushes" instance=ExtResource("2_14l6h")]
+[node name="Bush3" parent="Node2D/Bushes" instance=ExtResource("4_obf5x")]
 position = Vector2(305, 65)
 
-[node name="Bush4" parent="Node2D/Bushes" instance=ExtResource("2_14l6h")]
+[node name="Bush4" parent="Node2D/Bushes" instance=ExtResource("4_obf5x")]
 position = Vector2(48, 140)
 
-[node name="Bush5" parent="Node2D/Bushes" instance=ExtResource("2_14l6h")]
+[node name="Bush5" parent="Node2D/Bushes" instance=ExtResource("4_obf5x")]
 position = Vector2(187, 35)
 
-[node name="Bush6" parent="Node2D/Bushes" instance=ExtResource("2_14l6h")]
+[node name="Bush6" parent="Node2D/Bushes" instance=ExtResource("4_obf5x")]
 position = Vector2(271, 83)
 
-[node name="Bush7" parent="Node2D/Bushes" instance=ExtResource("2_14l6h")]
+[node name="Bush7" parent="Node2D/Bushes" instance=ExtResource("4_obf5x")]
 position = Vector2(269, 36)
 
-[node name="Bush8" parent="Node2D/Bushes" instance=ExtResource("2_14l6h")]
+[node name="Bush8" parent="Node2D/Bushes" instance=ExtResource("4_obf5x")]
 position = Vector2(241, 142)
 
-[node name="Bush9" parent="Node2D/Bushes" instance=ExtResource("2_14l6h")]
+[node name="Bush9" parent="Node2D/Bushes" instance=ExtResource("4_obf5x")]
 position = Vector2(49, 50)
 
-[node name="Player" parent="Node2D" instance=ExtResource("1_o0v6b")]
+[node name="Player" parent="Node2D" instance=ExtResource("5_25aga")]
 position = Vector2(160, 81)
 
 [node name="Grass" type="Node2D" parent="Node2D"]
 
-[node name="Grass" parent="Node2D/Grass" instance=ExtResource("6_qxt01")]
+[node name="Grass" parent="Node2D/Grass" instance=ExtResource("6_wqisu")]
 position = Vector2(96, 48)
 
-[node name="Grass2" parent="Node2D/Grass" instance=ExtResource("6_qxt01")]
+[node name="Grass2" parent="Node2D/Grass" instance=ExtResource("6_wqisu")]
 position = Vector2(80, 48)
 
-[node name="Grass5" parent="Node2D/Grass" instance=ExtResource("6_qxt01")]
+[node name="Grass5" parent="Node2D/Grass" instance=ExtResource("6_wqisu")]
 position = Vector2(80, 32)
 
-[node name="Grass6" parent="Node2D/Grass" instance=ExtResource("6_qxt01")]
+[node name="Grass6" parent="Node2D/Grass" instance=ExtResource("6_wqisu")]
 position = Vector2(145, 32)
 
-[node name="Grass7" parent="Node2D/Grass" instance=ExtResource("6_qxt01")]
+[node name="Grass7" parent="Node2D/Grass" instance=ExtResource("6_wqisu")]
 position = Vector2(288, 80)
 
-[node name="Grass3" parent="Node2D/Grass" instance=ExtResource("6_qxt01")]
+[node name="Grass3" parent="Node2D/Grass" instance=ExtResource("6_wqisu")]
 position = Vector2(63, 48)
 
-[node name="Grass4" parent="Node2D/Grass" instance=ExtResource("6_qxt01")]
+[node name="Grass4" parent="Node2D/Grass" instance=ExtResource("6_wqisu")]
 position = Vector2(63, 33)
